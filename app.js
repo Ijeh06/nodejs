@@ -10,10 +10,12 @@
 // })
 
 const content = 'Hello, World!';
+const fs = require('fs');
 
 fs.writeFile('output.txt', content, (err) => {
-   if (err) {
-       console.error(err);
-       return;
-   }
-});
+    if (err){
+        console.error(err);
+        return;
+    }
+    console.log('File has been saved!');
+})
