@@ -3,6 +3,7 @@ const http = require('http');
 const path = require('path');
 const os = require('os');
 const url = require('url');
+const crypto = require('crypto');
 
 
 // fs.readFile('example.txt', 'utf8', (err, data) => {
@@ -49,8 +50,13 @@ const url = require('url');
 // console.log('Total Memory:', os.totalmem());
 // console.log('Free Memory:', os.freemem());
 
-const myUrl = new URL('hhtps://example.com:8080/path/name?query=Ekene#hash');
+// const myUrl = new URL('hhtps://example.com:8080/path/name?query=Ekene#hash');
 
-console.log('Host',myUrl.host);
-console.log('Pathname',myUrl.pathname);
-console.log('Search Params',myUrl.searchParams.get('query'));
+// console.log('Host',myUrl.host);
+// console.log('Pathname',myUrl.pathname);
+// console.log('Search Params',myUrl.searchParams.get('query'));
+
+const hash = crypto.createHash('sha256');
+hash.update('Hello, World!');
+console.log('Hash:', hash.digest('hex'));
+
