@@ -62,9 +62,9 @@ const math = require('./math');
 // hash.update('Hello, World!');
 // console.log('Hash:', hash.digest('hex'));
 
-const message = sayHello('Ekene')
+// const message = sayHello('Ekene')
 
-console.log(message);
+// console.log(message);
 
-console.log(math.add(5, 3));
-console.log(math.subtract(5, 3));
+// console.log(math.add(5, 3));
+// console.log(math.subtract(5, 3));
